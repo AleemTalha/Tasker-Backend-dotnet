@@ -64,7 +64,7 @@ builder.Services.AddAuthentication(
 
         OnAuthenticationFailed = context =>
         {
-            Console.WriteLine("❌ Authentication Failed");
+            Console.WriteLine("Authentication Failed");
             Console.WriteLine(context.Exception.ToString());
 
             return Task.CompletedTask;
@@ -72,7 +72,7 @@ builder.Services.AddAuthentication(
 
         OnChallenge = context =>
         {
-            Console.WriteLine("⚠️ Challenge Triggered");
+            Console.WriteLine("Challenge Triggered");
             Console.WriteLine(context.Error);
             Console.WriteLine(context.ErrorDescription);
 

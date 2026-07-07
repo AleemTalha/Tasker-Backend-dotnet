@@ -2,7 +2,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DTO.User
 {
-
     public class SignUp
     {
         [Required(ErrorMessage = "Full name is required.")]
@@ -17,7 +16,6 @@ namespace DTO.User
         [MinLength(8, ErrorMessage = "Password must be at least 8 characters long.")]
         [MaxLength(30, ErrorMessage = "Password cannot exceed 30 characters.")]
         public required string Password { get; set; }
-        public IFormFile? Image { get; set; }
     }
 
     public class Login
